@@ -5,6 +5,8 @@ curl -O https://storage.googleapis.com/golang/go1.11.2.linux-amd64.tar.gz
 
 tar -xvf go1.11.2.linux-amd64.tar.gz
 
+mkdir go
+
 sudo mv go /go
 
 echo "export GOPATH=$HOME/go" >> ~/.profile
