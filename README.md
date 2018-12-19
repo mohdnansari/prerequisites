@@ -14,3 +14,5 @@ python
 golang
 
 more may be added to the list in future
+
+Note: All the scripts can be run from inside of the directory "prerequisites" after cloning.
