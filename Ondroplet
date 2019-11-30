@@ -9,3 +9,13 @@ Step5: install nodeJS through PPA
       https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04
 
 Step6: now download the fabric binary images along with fabric-samples
+
+Step7: **** verify installation of fabric ***
+      A) run ./byfn.sh up  !!! See point D befor running this !!!
+            Note: Ubuntu 18+ takes up RAM. The VM instance should have 2GB of RAM. Shorter RAM can result in runtime memory 
+                  exhaustion issues. 
+      B) if something goes wrong due to connectivity issues/etc, before runnign byfn up again, first bring down with "byfn down"
+         Also, make sure there are not running containers (docker ps -aq). If needed kill the ones in memory.
+      C) ./byfn down and then docker rm $(docker ps -aq)
+      D) IMPORTANT: while running ./byfn.sh up, sometimes the script runs slow, due to various factors like CPU, Ram availability etc
+                    use the timeout flag i.e. -t 100, so that the process waits 100 seconds before timing out.
