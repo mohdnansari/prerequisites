@@ -5,4 +5,7 @@ Step2: create a non-root super user
 Step3: install golang
       https://www.digitalocean.com/community/tutorials/how-to-install-go-on-ubuntu-18-04
 Step4: Correctly set GOPATH and GOROOT. essential for go runtime.
-Step5: 
+Step5: install nodeJS through PPA
+      https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04
+
+Step6: now download the fabric binary images along with fabric-samples
