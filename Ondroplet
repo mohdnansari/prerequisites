@@ -1,0 +1,7 @@
+Step1: create a DO droplet instance with preinstalled docker image on ubuntu 18+.
+Step2: create a non-root super user
+      https://www.digitalocean.com/community/tutorials/how-to-create-a-sudo-user-on-ubuntu-quickstart
+
+Step3: install golang
+Step4: Correctly set GOPATH and GOROOT. essential for go runtime.
+Step5: 
