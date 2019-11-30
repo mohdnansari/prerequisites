@@ -7,11 +7,13 @@ Step3: install golang
 Step4: Correctly set GOPATH and GOROOT. essential for go runtime.
 Step5: install nodeJS through PPA
       https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04
+      **Note: run "npm -v" at least once after installation. this creates a much needed config file that npm will search for in 
+              future runs.
 
 Step6: now download the fabric binary images along with fabric-samples
 
 Step7: **** verify installation of fabric ***
-      A) run ./byfn.sh up  !!! See point D befor running this !!!
+      A) run ./byfn.sh up -t 100  !!! See point D befor running this !!!
             Note: Ubuntu 18+ takes up RAM. The VM instance should have 2GB of RAM. Shorter RAM can result in runtime memory 
                   exhaustion issues. 
       B) if something goes wrong due to connectivity issues/etc, before runnign byfn up again, first bring down with "byfn down"
