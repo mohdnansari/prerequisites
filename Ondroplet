@@ -1,3 +1,7 @@
+NOTES:
+1) Digital ocean instances wll have the firewall utility UFW. Following command will set a port open "ufw allow 8080"
+   "ufw status" will show the list of all open ports
+
 Step1: create a DO droplet instance with preinstalled docker image on ubuntu 18+.
 Step2: create a non-root super user
       https://www.digitalocean.com/community/tutorials/how-to-create-a-sudo-user-on-ubuntu-quickstart
