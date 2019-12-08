@@ -25,3 +25,28 @@ Step7: **** verify installation of fabric ***
       C) ./byfn down and then docker rm $(docker ps -aq)
       D) IMPORTANT: while running ./byfn.sh up, sometimes the script runs slow, due to various factors like CPU, Ram availability etc
                     use the timeout flag i.e. -t 100, so that the process waits 100 seconds before timing out.
+
+## TROUBLESHOOTING Lessons:
+
+1) Received the following error: 
+         ``` Error reading configuration: Unsupported Config Type ""
+
+This issue is discussed on the Jira ticket https://jira.hyperledger.org/browse/FAB-15582
+
+This error is a result of the configpath variable not set properly. For the 3 org example, 
+STEP1) it should be set to 3node2channel/deployment (instead of 3node2channel directory as per the tutorial). 
+   i.e. set FABRIC_CFG_PATH to "3node2channel/deployment"
+STEP2) the crypto-config directory needs to be present inside the directory deployment.
+So the directory structure should be:
+
+    *3node2channel
+    **channelartifacts
+    **deployment
+    ***crypto_config
+    ***crypto_config.yaml
+    ***configtx.yaml
+Therefore, before running the command, move the said directory to the right place, set the config path variable, and then run the
+command configtxgen. 
+    
+../bin/configtxgen -configPath ./deployment -profile ThreeOrgsOrdererGenesis -outputBlock ./channel-artifacts/genesis.block
+
