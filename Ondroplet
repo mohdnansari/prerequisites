@@ -50,3 +50,9 @@ command configtxgen.
     
 ../bin/configtxgen -configPath ./deployment -profile ThreeOrgsOrdererGenesis -outputBlock ./channel-artifacts/genesis.block
 
+
+2) "other_hosts" variable is mentioned at multiple places inside of .yml files for node1, node2, node3. make sure to update this with the orderer address 
+   in all these locations before bringing the network up using docker-compose files.
+   
+3) DO droplets, by default do not contain any private IP addresses. In order ot make use of public IP address inside of yml files 
+   OPEN THE PORT using ufw allow **** inside of each instance. we will need port "ufw allow 7050:7053/tcp" 
