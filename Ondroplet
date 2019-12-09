@@ -56,3 +56,5 @@ command configtxgen.
    
 3) DO droplets, by default do not contain any private IP addresses. In order ot make use of public IP address inside of yml files 
    OPEN THE PORT using ufw allow **** inside of each instance. we will need port "ufw allow 7050:7053/tcp" 
+
+4) To make things simple SOLO and MSP policy of ANY 1 is used  in the above setup. a real world application will need KAFKA and ALL. try it out.
