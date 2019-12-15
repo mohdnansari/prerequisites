@@ -1,4 +1,6 @@
 NOTES:
+0) while creating the instances make sure to create Private IP addresses. 
+
 1) Digital ocean instances wll have the firewall utility UFW. Following command will set a port open "ufw allow 8080"
    "ufw status" will show the list of all open ports
 
